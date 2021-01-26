@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <style>
+        td {
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <th> Title </th>
+            <th> Description </th>
+            <th> Link </th>
+        </tr>
+        {% for item in items %}
+        <tr>
+            <td>
+                <p>{{item.title}}</p>
+            </td>
+            <td>
+                <p>{{item.description}}</p>
+            </td>
+            <td> <a href={{item.link}}>{{item.link}}</a> </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <!--{% for item in items %}
+    <b>{{item.title}}</b><br />
+    <i>{{item.description}}</i><br />
+    <a href={{item.link}}>{{item.link}}</a>
+    <hr /> {% endfor %}-->
+</body>
+
+</html>
